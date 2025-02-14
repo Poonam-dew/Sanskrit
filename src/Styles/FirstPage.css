@@ -1,0 +1,86 @@
+
+
+@font-face{
+  font-family:'samarkan';
+  src:local('samarkan'), url("../Fonts/SamarkanNormal.ttf") ;
+
+}
+.samarkan{
+  font-family: 'samarkan';
+  font-weight: 400;
+  font-style: normal;
+}
+.firstPage{
+  background-color: white;
+  position:relative;
+  top:0rem;
+ padding-top:3.5rem;
+ z-index:1;
+ 
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+.firstPage .fContent{
+ 
+  position:relative;
+   width:90%;
+  height:70vh;
+  display:flex;
+
+border-top-right-radius: 4rem; 
+  border-bottom-right-radius: 4rem;
+}
+.firstPage .fContent img{
+  
+width:100%;
+height:100%;
+opacity: 1;
+  border-top-right-radius: 4rem; 
+  border-bottom-right-radius: 4rem;
+  
+}
+.firstPage .fContent .headings{
+ 
+  position:absolute;
+  top:40%;
+  right:0%;
+  background-color:transparent;
+  font-size:0.8rem;
+  color:red;
+  width:100%;
+  height:40%;
+  display:flex;
+  margin-right:10%;
+  flex-direction:column;
+  align-items:flex-end;
+  justify-content:center;
+}
+#margin{
+  margin-top:2rem;
+}
+.firstPage .fContent .headings h1{
+  background:transparent;
+  text-shadow:9px 8px 16px black;
+}
+@media(max-width:800px){
+  .firstPage{
+   position:relative;
+   top:0rem;
+   padding-top:2rem;
+  }
+   .firstPage .fContent {
+    height:60vh;
+    width:80vw;
+   }
+ .firstPage .fContent .headings{
+   width:80%;
+   font-size:0.5rem;
+ }
+ .firstPage .fContent .headings h1{
+   
+ }
+ 
+ }

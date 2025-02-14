@@ -1,0 +1,118 @@
+.coursemodal_1{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  
+
+}
+ .know_more_1{
+   color:black;
+   
+   background-color:#ffcf2a;
+   
+  display:flex;
+  flex-direction:column;
+ transition: transform ease-out 1s;
+position:relative;
+top:-5.2rem;
+transition:all 0.3s ease-out;
+position:relative;
+margin-top:5rem;
+ 
+align-items: top;
+  
+
+  padding:2rem 2rem;
+  justify-content:center;
+  text-align:center;
+  
+}
+#transition{
+   animation: moveUp 0.7s ease-out forwards;
+}
+#notransition{
+  animation: moveUp 0.7s ease-out forwards;
+}
+@keyframes moveUp {
+  0% {
+    transform: ScaleX(0%);
+    opacity: 0;
+  }
+  100% {
+    transform: ScaleX(100%);
+    opacity: 1;
+  }
+}
+
+.cross{
+  position:absolute;
+ 
+  top:1rem;
+  right:1rem;
+  height:2rem;
+  width:2rem;
+  background-color: black;
+  color:white;
+  padding:0.3rem;
+  border-radius:20px;
+}
+
+.knowlist1 {
+  display:flex;
+  flex-direction:column;
+  gap:0.7rem;
+  text-align:start;
+  font-size: 0.66rem;
+}
+.knowlist1 li{
+  list-style-type:disc;
+  
+}
+.detail_wrapper_1{
+  display:flex;
+  flex-direction:column;
+  gap:0.8rem 0;
+  
+}
+.material_wrapper_1{
+ 
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem 0;
+ 
+  
+}
+.detail_wrapper_1 a ,.material_wrapper_1  a{
+  padding:0.4rem;
+ margin:1rem 0;
+  background-color: black;
+  color:white;
+  box-shadow: 0px 3px 7px black;
+  font-weight:bold;
+  
+}
+
+.cli{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: aquamarine;
+}
+
+.material_wrapper_1 h2{
+  margin-top:2rem;
+}
+
+  
+
+@media(max-width:450px){
+  .course_cards{
+        max-width:95%;
+    grid-template-columns: repeat( auto-fit, minmax(210px, 1fr) );
+  }
+  .know_more_1{
+    max-width:95%;
+   
+  }
+  .detail_wrapper_1 .knowlist1{
+    font-size: 0.7rem;
+  }
+}

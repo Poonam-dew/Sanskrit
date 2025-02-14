@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'samarkan';
+  src: local('samarkan'), url("../Fonts/SamarkanNormal.ttf");
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('../assets/Background.png');
+  background-repeat: repeat-y;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  padding-top: 12rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 -5px;
+}
+
+.column {
+  width: 45%;
+  margin: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem 3rem 1rem 1rem;
+  text-align: center;
+  background-color: rgba(255, 191, 120, 1);
+  
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  position: relative;
+}
+
+.card .image {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px #a5a094;
+  background-color: rgba(255, 238, 169, 1);
+  transform: scale(1.01);
+}
+
+.card p {
+  font-size: larger;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+.card button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #ff7d29;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #ff5733;
+}
+
+@media screen and (max-width: 1200px) {
+  .column {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.card:hover .column {
+  width: 33rem;
+}
