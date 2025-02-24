@@ -1,0 +1,53 @@
+.team {
+  text-align: center;
+  background-image: url('../assets/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ margin-top:8rem;
+}
+
+.heading h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image {
+  width: 90%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hover-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 0, 0.8);
+  color: black;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.image-container:hover .hover-text {
+  display: block;
+  font-size: xx-large;
+}

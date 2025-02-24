@@ -1,0 +1,39 @@
+.resources{
+  background-image:url('../assets/Background.png');
+  background-repeat:repeat-y;
+  background-color:#fcf7b2 ;
+  background-size: 100%;
+  margin-top:7rem;
+ padding-bottom: 3rem;
+  width:100%;
+}
+.resourceList{
+  max-width:70%;
+ 
+  margin:0 auto;
+  padding:2rem 1rem;
+  display:grid;
+  
+  gap:0.8rem;
+  grid-template-rows: repeat( auto-fit, minmax(30px, 1fr) );
+}
+
+
+
+
+@media(max-width:780px){
+  .resources{
+    background-image: url('../assets/Background_2.png');
+    background-repeat:repeat-y;
+    background-size: 100%;
+  }
+  .resourceList ,.resourcelink{
+    max-width: 90%;
+  }
+  .leftResource h2{
+    font-size: 0.8rem;
+  }
+  .leftResource h4{
+    font-size: 0.6rem;
+  }
+}

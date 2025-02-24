@@ -1,0 +1,60 @@
+
+  
+.learn {
+    /* background-color: #fff2b1; */
+    background-image: url('../assets/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:8rem;
+}
+
+.heading {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.shlok {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 191, 120, 1);
+  
+    align-items: center;
+    padding: 1.5rem 1rem 1rem 1rem;
+    font-size: x-large;
+    font-weight: 200;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.shlok .audio {
+    padding: 2rem 0rem 2rem 28rem;
+}
+
+.shlok button {
+    font-size: xx-large;
+    border: none;
+    background-color: rgba(255, 191, 120, 1);
+  
+}
+
+@media(max-width: 800px) {
+    .shlok .audio {
+        padding: 2rem 0rem 2rem 10rem;
+    }
+    .shlok button {
+        font-size: x-large;
+    }
+}
+
+@media(max-width: 600px) {
+    .shlok {
+        font-size: large;
+    }
+    .shlok .audio {
+        padding: 2rem 0rem 2rem 2rem;
+    }
+    .shlok button {
+        font-size: large;
+    }
+}

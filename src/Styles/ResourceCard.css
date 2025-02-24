@@ -1,0 +1,16 @@
+.resource_card{
+  display:flex;
+  background-color:#ffb2aa ;
+ justify-content: space-between;
+ align-items: center;
+  padding:1rem;
+  box-shadow:1px 2px 13px 3px black;
+  border-radius:10px;
+  
+}
+.leftResource{
+  
+  display:flex;
+  flex-direction: column;
+  gap:0.5rem 0;
+}

@@ -1,0 +1,65 @@
+  
+  @font-face {
+    font-family: 'samarkan';
+    src: local('samarkan'), url("../Fonts/SamarkanNormal.ttf");
+  }
+  
+  .home-container {
+    background-image: url('../assets/Background.png');
+    background-size: cover;
+    background-position: center 165px;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    padding: 2rem;
+    color: #333; /* Adjust text color as needed */
+  }
+  
+  .left {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .right {
+    width:922px;
+    height:480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 200px;
+  }
+  
+  .about-us h2 {
+    font-family: 'samarkan', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .Namo.Namah, .Welcome {
+    margin-bottom: 2rem;
+  }
+  
+  .Namo.Namah h2, .Welcome h2 {
+    font-family: 'samarkan', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+    }
+  
+    .left, .right {
+      padding: 1rem 0;
+    }
+  }
+  
