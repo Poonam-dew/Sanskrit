@@ -1,88 +1,99 @@
-@font-face {
-  font-family: 'samarkan';
-  src: local('samarkan'), url("../Fonts/SamarkanNormal.ttf");
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url('../assets/Background.png');
-  background-repeat: repeat-y;
-  background-size: cover;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.row {
-  padding-top: 12rem;
+.cont {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 -5px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
 }
 
-.column {
-  width: 45%;
-  margin: 10px;
+.container {
+  display: flex;
+  margin-top: 100px;
+  width: 60%;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
 }
 
-.card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 2rem 3rem 1rem 1rem;
-  text-align: center;
-  background-color: rgba(255, 191, 120, 1);
-  
-  transition: all 0.3s ease;
-  border-radius: 20px;
+.tabs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
+}
+
+.tab {
+  height: 50%;
+  width: 100%;
   position: relative;
-}
-
-.card .image {
-  width: 90%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.card:hover {
-  box-shadow: 0px 6px 10px #a5a094;
-  background-color: rgba(255, 238, 169, 1);
-  transform: scale(1.01);
-}
-
-.card p {
-  font-size: larger;
-  text-align: justify;
-  padding: 0 10px;
-}
-
-.card button {
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #ff7d29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
-  border-radius: 10px;
-  color: white;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease-in-out;
+}
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+.tab span {
+  font-family: 'Saira Stencil One', sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  transform: rotate(-90deg);
+  position: absolute;
+  font-size: 42px;
 }
 
-.card button:hover {
-  background-color: #ff5733;
+/* Default (inactive) styles */
+.upcoming {
+  background-color: #312229;
+  color: #D5C5AE;
+  border-radius: 1rem 0 0 0;
 }
 
-@media screen and (max-width: 1200px) {
-  .column {
-    width: 90%;
-  }
+.past {
+  background-color: #D5C5AE;
+  color: #312229;
+  border-radius: 0 0 0 1rem;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+/* Active (clicked) styles */
+.tab.active {
+  background-color: #D5C5AE;
+  color: #312229;
 }
 
-.card:hover .column {
-  width: 33rem;
+.tab:not(.active) {
+  background-color: #312229;
+  color: #D5C5AE;
+}
+
+.content {
+  flex-grow: 1;
+  height: 100%;
+  background-color: #312229;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 1rem;
+  overflow-y: auto;  /* Makes the container scrollable */
+  padding: 10px;
+}
+
+.event-posters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
