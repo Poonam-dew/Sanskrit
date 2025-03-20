@@ -46,7 +46,6 @@ const Navbar = () => {
                 setIsOpen(false)
             }
         }
-        console.log(isOpen);
 
         window.addEventListener('resize', handleResize)
 

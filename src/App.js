@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.js';
 import FirstPage from './Pages/FirstPage.js';
-import Home from './Pages/Home.js';
+import Home from './components/Home.jsx';
 import Login from './Pages/Login.js';
 import Event from './Pages/Event.js';
 import LearningSanskrit from './Pages/LearningSanskrit.js';
@@ -22,7 +22,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<FirstPage />} />
+          {/* <Route path="/" element={<FirstPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/events" element={<Event />} />
@@ -31,12 +31,12 @@ function App() {
           <Route path="/ShaastraSetu" element={<SaastraSetu />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/Team" element={<Team />} />
-          <Route path="/signup" element={<SignUp />} />
-
+          <Route path="/signup" element={<SignUp />} /> */}
+          <Route path="/" element={<Home />}></Route>
 
         </Routes>
-        <ToastContainer />
-        <Footer />
+        {/* <ToastContainer />
+        <Footer /> */}
       </BrowserRouter>
 
 

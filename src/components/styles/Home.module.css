@@ -1,0 +1,102 @@
+/* section {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+.div2 {
+    grid-area: 1 / 5 / 2 / 11;
+} */
+
+.grid-container {
+    display: grid;
+    /* gap: 10px; */
+    padding: 2rem;
+
+    /* Mobile-first: single-column layout */
+    grid-template-columns: 1fr;
+}
+
+.section {
+    /* padding: 20px;
+    background-color: lightblue;
+    border: 1px solid #000; */
+    text-align: center;
+    min-height: 100vh;
+    align-content: center;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.section:nth-child(1) {
+    padding: 0 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+
+    p {
+        font-size: 2rem;
+        text-align: left;
+    }
+}
+
+.grid-wrapper {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 2rem 0;
+    /* Always 7 columns */
+}
+
+/* .box {
+    padding: 20px;
+    background-color: lightblue;
+    border: 1px solid #000;
+    text-align: center;
+} */
+
+/* First box spans 5 columns, second spans 2 */
+.box:nth-child(1) {
+    grid-column: span 6;
+    text-align: right;
+}
+
+.box:nth-child(2) {
+    grid-column: span 1;
+}
+
+.bluish {
+    background-color: #47596F;
+}
+
+.brownish {
+    background-color: #B18653;
+}
+
+/* Responsive Grid for md screens and above */
+@media (min-width: 992px) {
+
+    /* Adjust md breakpoint as needed */
+    .grid-container {
+        grid-template-columns: repeat(11, 1fr);
+        /* 11-column grid */
+    }
+
+    .section:nth-child(1) {
+        grid-column: span 6;
+    }
+
+    .section:nth-child(2) {
+        grid-column: span 5;
+    }
+}

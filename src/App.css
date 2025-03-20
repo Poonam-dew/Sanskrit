@@ -1,25 +1,39 @@
+* {
 
-*{
-
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-.App {
-  background-color:  rgb(252, 251, 209);
 
- 
-  width:100%;
-  height:auto;
-  display:flex;
+.App {
+  background-color: hsl(17, 37%, 85%, 0.5);
+
+
+  width: 100%;
+  height: auto;
+  display: flex;
   flex-direction: column;
-  font-family:Serif;
+  font-family: Serif;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
 
-  
+.heading-section {
+  width: 100%;
+  text-align: left;
+  color: #54101D;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 
+  h1 {
+    color: #54101D;
+  }
 
-
-    
-
+  .strip {
+    background-color: #54101D;
+    flex-grow: 1;
+  }
+}
