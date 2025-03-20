@@ -1,99 +1,54 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.EventsWeHave {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
-.cont {
+.eventSlider {
+  margin-bottom: 30px;
+}
+
+.eventHeading {
+  font-size: 50px;  
+  font-weight: 700;  
+  color: #222;  
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  text-align: center; 
+  margin-bottom: 50px;
+}
+
+.eventContent {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+  margin-top: 20px;
 }
 
-.container {
+.eventContent:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.eventText {
+  flex: 1;
+  font-size: 18px;
+  color: #444;
+  padding: 20px;
+}
+
+.eventImage {
+  flex: 1;
   display: flex;
-  margin-top: 100px;
-  width: 60%;
-  height: 70%;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  
 }
 
-.tabs {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 20%;
-}
-
-.tab {
-  height: 50%;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
-
-.tab span {
-  font-family: 'Saira Stencil One', sans-serif;
-  font-weight: bold;
-  display: inline-block;
-  transform: rotate(-90deg);
-  position: absolute;
-  font-size: 42px;
-}
-
-/* Default (inactive) styles */
-.upcoming {
-  background-color: #312229;
-  color: #D5C5AE;
-  border-radius: 1rem 0 0 0;
-}
-
-.past {
-  background-color: #D5C5AE;
-  color: #312229;
-  border-radius: 0 0 0 1rem;
-}
-
-/* Active (clicked) styles */
-.tab.active {
-  background-color: #D5C5AE;
-  color: #312229;
-}
-
-.tab:not(.active) {
-  background-color: #312229;
-  color: #D5C5AE;
-}
-
-.content {
-  flex-grow: 1;
-  height: 100%;
-  background-color: #312229;
-  width: 80%;
-  border: 2px solid black;
-  border-radius: 1rem;
-  overflow-y: auto;  /* Makes the container scrollable */
-  padding: 10px;
-}
-
-.event-posters {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.event-img {
-  width: 100%;
+.eventImage img {
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

@@ -1,46 +1,56 @@
-import React, { useState } from 'react';
-import '../Styles/Event.css';
-import event1 from '../assets/event1.jpg';  // Example image
-import event2 from '../assets/event2.jpg';  // Example image
+import React from "react";
+import MyCarousel from "../components/Carousel.js";
+import event1 from "../assets/ConvoChanting.jpeg";
+import event2 from "../assets/pragy.jpeg"; 
+import "../Styles/Event.css"; 
 
-const Event = () => {
-  const [activeTab, setActiveTab] = useState('upcoming');
-
+const EventsWeHave = () => {
   return (
-    <div className="cont">
-      <div className="container">
-        <div className="tabs">
-          <button
-            className={`tab upcoming ${activeTab === 'upcoming' ? 'active' : ''}`}
-            onClick={() => setActiveTab('upcoming')}
-          >
-            <span className='text'>upcoming events</span>
-          </button>
-          <button
-            className={`tab past ${activeTab === 'past' ? 'active' : ''}`}
-            onClick={() => setActiveTab('past')}
-          >
-            <span className='text'>past events</span>
-          </button>
+    <div className="EventsWeHave">
+      <div className="eventSlider">
+        <MyCarousel />
+      </div>
+      
+      <h2 className="eventHeading">Our Main Events</h2>
+
+      <div className="eventContent">
+        <div className="eventText">
+          <p>
+            Our main events bring together enthusiasts and professionals to share
+            knowledge, network, and showcase innovations. Stay tuned for
+            upcoming events filled with excitement and learning opportunities.
+          </p>
         </div>
-        <div className="content">
-          {activeTab === 'upcoming' ? (
-            <div className="event-posters">
-              <img src={event1} alt="Upcoming Event" className="event-img" />
-              <img src={event1} alt="Upcoming Event" className="event-img" />
-              <img src={event1} alt="Upcoming Event" className="event-img" />
-            </div>
-          ) : (
-            <div className="event-posters">
-              <img src={event2} alt="Past Event" className="event-img" />
-              <img src={event2} alt="Past Event" className="event-img" />
-              <img src={event2} alt="Past Event" className="event-img" />
-            </div>
-          )}
+        <div className="eventImage">
+          <img src={event1} alt="Main Event 1" />
+        </div>
+      </div>
+
+      <div className="eventContent">
+        <div className="eventText">
+          <p>
+            Explore the journey of knowledge and fun through our engaging events. 
+            Learn, share, and innovate with industry leaders and like-minded individuals.
+          </p>
+        </div>
+        <div className="eventImage">
+          <img src={event2} alt="Main Event 2" />
+        </div>
+      </div>
+
+      <div className="eventContent">
+        <div className="eventText">
+          <p>
+            Join us in shaping the future by participating in our key events. 
+            Stay updated and be part of an inspiring community of changemakers.
+          </p>
+        </div>
+        <div className="eventImage">
+          <img src={event1} alt="Main Event 3" />
         </div>
       </div>
     </div>
   );
 };
 
-export default Event;
+export default EventsWeHave;

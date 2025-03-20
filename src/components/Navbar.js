@@ -1,6 +1,7 @@
 import React,{ useState , useEffect ,useRef } from 'react';
 import '../Styles/Navbar.css';
 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
@@ -59,10 +60,13 @@ const Navbar=({toggle})=>{
            <NavLink to="/courses">Courses</NavLink>
           </li>
           <li>
-           <NavLink to="/shaastraSetu">Shaastra Setu</NavLink>
+           {/* <NavLink to="/shaastraSetu">Shaastra Setu</NavLink> */}
           </li>
           <li>
            <NavLink to="/resources">Resources</NavLink>  
+          </li>
+          <li>
+           <NavLink to="/Team">Meet The Team</NavLink>  
           </li>
    </ul>
 
