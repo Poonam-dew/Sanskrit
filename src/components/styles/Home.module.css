@@ -16,12 +16,19 @@
 } */
 
 .grid-container {
-    display: grid;
+    /* display: grid; */
     /* gap: 10px; */
-    padding: 2rem;
-
+    /* padding: 2rem; */
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    /* align-content: flex-start; */
+    justify-content: center;
+    gap: 3rem;
     /* Mobile-first: single-column layout */
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
+    /* justify-content: center; */
 }
 
 .section {
@@ -29,10 +36,14 @@
     background-color: lightblue;
     border: 1px solid #000; */
     text-align: center;
-    min-height: 100vh;
-    align-content: center;
+    /* padding: 5rem; */
+    /* min-height: 85vh; */
+    /* align-content: center;
+    align-items: center; */
     /* display: flex;
-    flex-direction: column; */
+    flex-direction: column;
+    align-items: center;
+    align-content: center; */
 }
 
 .section:nth-child(1) {
@@ -40,9 +51,8 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-content: center;
-    align-items: center;
-    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
 
     p {
         font-size: 2rem;
@@ -50,12 +60,10 @@
     }
 }
 
-.grid-wrapper {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(7, 1fr);
-    margin: 2rem 0;
-    /* Always 7 columns */
+.section:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* .box {
@@ -65,15 +73,6 @@
     text-align: center;
 } */
 
-/* First box spans 5 columns, second spans 2 */
-.box:nth-child(1) {
-    grid-column: span 6;
-    text-align: right;
-}
-
-.box:nth-child(2) {
-    grid-column: span 1;
-}
 
 .bluish {
     background-color: #47596F;
@@ -88,6 +87,7 @@
 
     /* Adjust md breakpoint as needed */
     .grid-container {
+        display: grid;
         grid-template-columns: repeat(11, 1fr);
         /* 11-column grid */
     }
@@ -98,5 +98,35 @@
 
     .section:nth-child(2) {
         grid-column: span 5;
+    }
+
+    .grid-wrapper {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(7, 1fr);
+        margin: 2rem 0;
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* Always 7 columns */
+    }
+
+    /* First box spans 5 columns, second spans 2 */
+    .box:nth-child(1) {
+        grid-column: span 5;
+        text-align: right;
+    }
+
+    .box:nth-child(2) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 992px) {
+    .box:nth-child(1) {
+        grid-column-start: 2;
+    }
+
+    .box:nth-child(2) {
+        grid-column-start: 1;
     }
 }

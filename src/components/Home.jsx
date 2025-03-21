@@ -17,12 +17,12 @@ const About = () => {
 
             <div className={styles.section}>
                 <div className={styles["grid-wrapper"]}>
-                    <h2 className={styles.box}>नमो नमः! <br /> NAMO NAMAH!</h2>
+                    <h1 className={styles.box}>नमो नमः! <br /> NAMO NAMAH!</h1>
                     <span className={styles.box + " " + styles.bluish}></span>
                 </div>
 
                 <div className={styles["grid-wrapper"]}>
-                    <h2 className={styles.box}>संस्कृत-मण्डले सुस्वागतम् <br /> Welcome to Sanskrit Club</h2>
+                    <h1 className={styles.box}>संस्कृत-मण्डले सुस्वागतम् <br /> Welcome to Sanskrit Club</h1>
                     <span className={styles.box + " " + styles.brownish}></span>
                 </div>
             </div>
