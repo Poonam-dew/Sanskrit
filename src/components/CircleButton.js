@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/CircleButton.css"; // Import CSS for styling
+import "../Styles/CircleButton.css"; // Import CSS for styling
 
 const CircleButton = ({ imageSrc, text, link }) => {
   return (

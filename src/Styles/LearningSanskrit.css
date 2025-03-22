@@ -1,0 +1,104 @@
+/* Container styling */
+.learning-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f5dc; /* Light beige background */
+  box-sizing: border-box;
+}
+
+/* Circle container with flex-wrap for responsiveness */
+.circle-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Circle styling */
+.circle {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: #D5C5AE; /* Light pastel yellow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.circle img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.circle h3 {
+  font-size: 28px;
+  color: #333;
+  font-weight: 900;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .circle h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .circle h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle h3 {
+    font-size: 18px;
+  }
+}
