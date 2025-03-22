@@ -1,5 +1,7 @@
 import React from "react"
 import styles from "./styles/Home.module.css"
+import Activity from "./RecentActivity"
+import Bottom from "./BottomSection"
 
 const About = () => {
     return (
@@ -66,6 +68,10 @@ const Home = () => {
             <About />
 
             <Announcements />
+
+            <Activity />
+
+            <Bottom />
         </>
     )
 }
