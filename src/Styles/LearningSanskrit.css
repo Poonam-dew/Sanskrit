@@ -5,7 +5,9 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background: #f5f5dc; /* Light beige background */
+  background-image: url('../assets/Background.png');
+  background-position: center 165px; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
   box-sizing: border-box;
 }
 
