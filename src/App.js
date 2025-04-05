@@ -10,6 +10,7 @@ import Event from './Pages/Event.js';
 import LearningSanskrit from './Pages/LearningSanskrit.js';
 import Courses from './Pages/Courses.js';
 import Resources from './Pages/Resources.js';
+import SanskritFun from './Pages/SanskritFun.js';
 import Team from './Pages/Team.js';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,6 +30,7 @@ function App() {
         <Route path="courses" element={<Courses/>}/> 
         <Route path="/resources" element={<Resources/>}/>  
         <Route path="/Team" element={<Team/>}/>
+        <Route path="/sanskrit-fun" element={<SanskritFun/>}/>
 
         
         

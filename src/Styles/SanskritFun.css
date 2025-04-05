@@ -1,0 +1,160 @@
+/* Page container */
+.fun-container {
+    padding: 20px;           /* Reduced padding for better fit */
+    background-image: url('../assets/Background.png');
+    background-size: contain;
+    background-position: center 65px;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Headings */
+.fun-heading {
+    font-size: 2.5rem;
+    color: #312229;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family:'samarkan';
+}
+.intro-line {
+    font-size: 1.4rem;
+    color: #444;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Shloka card */
+.cardd {
+    background-color: #D5C5AE;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;         /* Increased max-width for more content space */
+    margin: 20px 0;           /* Added spacing between cards */
+    padding: 40px;            /* Increased padding for better readability */
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Shloka with 4-line format */
+.shloka {
+    font-family: "Georgia", serif;
+    font-size: 1.6rem;
+    color: #444;
+    line-height: 2.2;         /* Increased line height for better readability */
+    margin-bottom: 25px;
+    white-space: pre-line;    /* Preserve line breaks */
+    text-align: center;
+}
+
+/* Audio Section */
+.audio-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* Centered audio button */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.audio-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #312229;
+    color: white;
+    border: none;
+    padding: 12px 30px;        /* Increased padding for better clickability */
+    border-radius: 8px;        
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.audio-btn:hover {
+    background:#312229;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f0f0f0;
+    border: none;
+    padding: 15px 25px;        /* Increased padding for a bigger button */
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    color: #444;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover {
+    background: #e0e0e0;
+}
+
+/* Meaning Content */
+.meaning-content {
+    margin-top: 25px;
+    padding: 20px 30px;        /* Added padding for better readability */
+    border-left: 6px solid #312229;
+    background: #f1efee;
+    transition: 0.5s;
+}
+
+.meaning-content p {
+    margin: 15px 0;
+    color: #555;
+    line-height: 1.8;
+}
+.word-by-word p{
+    white-space: pre-line; 
+}
+.meaning strong, .word-by-word strong {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .fun-heading {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 30px;            /* Slightly reduced padding on smaller screens */
+    }
+
+    .shloka {
+        font-size: 1.3rem;        /* Reduced shloka font size for small screens */
+        line-height: 2;
+    }
+    .intro-line {
+        font-size: 1.2rem;
+    }
+    .audio-btn, .toggle-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .meaning-content {
+        padding: 15px;
+    }
+}
