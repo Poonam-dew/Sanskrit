@@ -12,7 +12,7 @@ import Courses from './Pages/Courses.js';
 import Resources from './Pages/Resources.js';
 import SaastraSetu from './Pages/SaastraSetu.js';
 import SignUp from './components/SignUp.js';
-import Team from './Pages/Team.js';
+import Team from './components/Team.jsx';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -33,6 +33,7 @@ function App() {
           <Route path="/Team" element={<Team />} />
           <Route path="/signup" element={<SignUp />} /> */}
           <Route path="/" element={<Home />}></Route>
+          <Route path="/team" element={<Team />}></Route>
 
         </Routes>
         {/* <ToastContainer />

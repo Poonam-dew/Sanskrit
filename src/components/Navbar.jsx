@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import IIT from '../assets/IIT.png';
 import SLogo from '../assets/SLogo.png';
 import styles from "./styles/Navbar.module.css";
@@ -32,12 +32,33 @@ const links = [
     },
     {
         title: "meet the team",
-        href: "/events"
+        href: "/team"
     }
 ]
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
+
+    const navbarRef = useRef(null);
+    const [isSticky, setIsSticky] = useState(false);
+    const [navbarHeight, setNavbarHeight] = useState(0);
+
+    useEffect(() => {
+        if (navbarRef.current) {
+            setNavbarHeight(navbarRef.current.offsetHeight);
+        }
+
+        const handleScroll = () => {
+            if (window.scrollY > navbarHeight) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [navbarHeight]);
     useEffect(() => {
         function handleResize() {
             console.log(window.innerWidth)
@@ -53,7 +74,7 @@ const Navbar = () => {
     })
 
     return (
-        <nav>
+        <nav ref={navbarRef} className={isSticky ? "nav-sticky" : ""}>
             <div className={styles.navContainer}>
                 <div className={styles.logoSection}>
                     <img src={IIT} alt="IITR" />
