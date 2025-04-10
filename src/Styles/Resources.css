@@ -1,38 +1,71 @@
-.resources{
-  background-repeat:repeat-y;
-  background-color:#fcf7b2 ;
-  background-size: 100%;
-  margin-top:7rem;
- padding-bottom: 3rem;
-  width:100%;
-}
-.resourceList{
-  max-width:70%;
- 
-  margin:0 auto;
-  padding:2rem 1rem;
-  display:grid;
-  
-  gap:0.8rem;
-  grid-template-rows: repeat( auto-fit, minmax(30px, 1fr) );
+.resource-box {
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
+.box-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
+.box-subtitle {
+  color: #555;
+  margin-bottom: 10px;
+}
 
+.dropdown-toggle {
+  background: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-@media(max-width:780px){
-  .resources{
-  
-    background-repeat:repeat-y;
-    background-size: 100%;
-  }
-  .resourceList ,.resourcelink{
-    max-width: 90%;
-  }
-  .leftResource h2{
-    font-size: 0.8rem;
-  }
-  .leftResource h4{
-    font-size: 0.6rem;
-  }
+.dropdown-links {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dropdown-links li {
+  list-style: disc;
+  margin: 5px 0;
+}
+
+.pdf-card {
+  background: #e8f0fe;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.link-list {
+  margin-top: 10px;
+  margin-left: 1rem;
+}
+
+.link-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.link-heading {
+  font-weight: 600;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.link-anchor {
+  color: #0645AD;
+  text-decoration: underline;
 }
