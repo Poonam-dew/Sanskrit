@@ -13,6 +13,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mandala from './assets/background.png';
+import ClubLibrary from './Pages/ClubLibrary.js';
+
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
             <Route path="/resources" element={<Resources />} />
             <Route path="/team" element={<Team />} />
         <Route path="/sanskrit-fun" element={<SanskritFun/>}/>
+        <Route path="/clubLibrary" element={<ClubLibrary/>}/>
+
           </Routes>
           <ToastContainer />
           <Footer />

@@ -11,7 +11,7 @@ const LearnSanskrit = () => {
   return (
     <div className="learning-container">
       <div className="circle-container">
-        <div className="circle" onClick={() => navigate("/library")}>
+        <div className="circle" onClick={() => navigate("/clubLibrary")}>
           <img src={libraryIcon} alt="Library" />
           <h3>Club Library</h3>
         </div>

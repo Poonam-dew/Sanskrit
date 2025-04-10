@@ -1,7 +1,7 @@
 /* Page container */
 .fun-container {
     padding: 20px;           /* Reduced padding for better fit */
-    background-image: url('../assets/Background.png');
+    background-image: url('../assets/background.png');
     background-size: contain;
     background-position: center 65px;
     background-repeat: no-repeat;
