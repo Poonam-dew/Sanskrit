@@ -15,7 +15,7 @@ const Navbar=({toggle})=>{
  const location = useLocation();
  React.useEffect(()=> {
    if (window.location.pathname === "/") {
-      setNavBg("white");
+      setNavBg("#312229");
     } else {
       setNavBg('rgba(49, 34, 41, 1)')
     }
