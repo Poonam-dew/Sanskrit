@@ -1,9 +1,4 @@
-.container {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+
 
 .heading {
     display: grid;
@@ -84,6 +79,7 @@
     }
 }
 
+  
 /* Larger screens: two-column layout */
 @media (min-width: 992px) {
 

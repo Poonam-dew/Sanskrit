@@ -3,22 +3,23 @@ import styles from "./styles/RecentActivity.module.css"
 import { SiGmail } from "react-icons/si"
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
+import { useEffect } from 'react';
 
 const socials = [
     {
-        href: "",
+        href: "sanskritclub@gmail.com",
         icon: SiGmail
     },
     {
-        href: "",
+        href: "https://www.facebook.com/sanskritiitr/",
         icon: FaFacebook
     },
     {
-        href: "",
+        href: "https://www.instagram.com/sanskrit_club/?hl=en",
         icon: FaInstagram
     },
     {
-        href: "",
+        href: "https://www.linkedin.com/company/sanskrit-club-iit-roorkee/posts/?feedView=all",
         icon: FaLinkedin
     },
     {
@@ -30,42 +31,36 @@ const socials = [
         icon: FaYoutube
     }
 ]
-
 const Activity = () => {
+    useEffect(() => {
+        // Load the Instagram embed script when the component mounts
+        const script = document.createElement('script');
+        script.setAttribute('src', 'https://www.instagram.com/embed.js');
+        script.setAttribute('async', '');
+        document.body.appendChild(script);
+
+        const twScript = document.createElement('script');
+        twScript.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+        twScript.setAttribute('async', '');
+        document.body.appendChild(twScript);
+    }, []);
+
     return (
         <section className={styles.container}>
-            <div className={styles.heading}>
-                <h1>RECENT ACTIVITY</h1>
-                <div className={styles.strip}></div>
-            </div>
-
-            <div className={styles.grid}>
-                <div className={styles.section}>
-                    <div className={styles.title}><h2>INSTAGRAM</h2></div>
-                    <p></p>
-                </div>
-
-                <div className={styles.section}>
-                    <div className={styles.title + " " + styles.title2}><h2>X / TWITTER</h2></div>
-                    <p></p>
-                </div>
-            </div>
-
             <div className={styles.touch}>
                 <h1>GET IN TOUCH</h1>
-
                 <div className={styles.icons}>
                     {
-                        socials.map(({ href, icon }, key) => {
-                            return (<a className={styles.icon} href={href} key={key}>
+                        socials.map(({ href, icon }, key) => (
+                            <a className={styles.icon} href={href} key={key}>
                                 {React.createElement(icon)}
-                            </a>)
-                        })
+                            </a>
+                        ))
                     }
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default Activity;

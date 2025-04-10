@@ -1,66 +1,51 @@
+// CoverflowCarousel.js
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import '../Styles/Carousel.css'; // Import the CSS file
-import blackDish from "../assets/Current.jpg";
-import concluded from "../assets/Concluded.jpg";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Autoplay } from 'swiper/modules';
 
-const MyCarousel = () => {
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/autoplay';
+
+import img1 from '../assets/Current.jpg';
+import img2 from '../assets/Concluded.jpg';
+import img3 from '../assets/ConvoChanting.jpeg';
+import img4 from '../assets/Current.jpg';
+import img5 from '../assets/Concluded.jpg';
+
+import '../Styles/Carousel.css';
+
+const Carousel = () => {
   return (
-    <div className="carousel-container"> {/* Wrapper div */}
-      <Carousel>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src={concluded}
-            alt="First slide"  
-            style={{
-              width: '80%',
-              height: '550px', // Set height as needed
-              objectFit: 'cover' // Options: 'fill', 'contain', 'cover', 'none', 'scale-down'
-            }}
-          />
-          <Carousel.Caption>
-            <h3>Feed Horn</h3>
-            <p></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src={blackDish}
-            alt="Second slide"
-            style={{
-              width: '80%',
-              height: '550px', // Set height as needed
-              objectFit: 'cover' // Options: 'fill', 'contain', 'cover', 'none', 'scale-down'
-            }}
-          />
-          <Carousel.Caption>
-            <h3>70 cm Black Dish</h3>
-            <p></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src={blackDish}
-            alt="Third slide"
-            style={{
-              width: '90%',
-              height: '550px', // Set height as needed
-              objectFit: 'cover' // Options: 'fill', 'contain', 'cover', 'none', 'scale-down'
-            }}
-          />
-          <Carousel.Caption>
-            <h3>65 cm Red Dish</h3>
-            <p></p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+    <div className="coverflow-container">
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+          slideShadows: false,
+        }}
+        modules={[EffectCoverflow, Autoplay]}
+        className="coverflow-swiper"
+      >
+        {[img1, img2, img3, img4, img5].map((image, index) => (
+          <SwiperSlide key={index}>
+            <img src={image} alt={`Slide ${index}`} className="coverflow-image" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
 
-export default MyCarousel;
+export default Carousel;

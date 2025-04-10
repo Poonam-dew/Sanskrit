@@ -17,6 +17,7 @@
     "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^11.0.2",
+    "swiper": "^11.2.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,5 +47,4 @@
   "devDependencies": {
     "react-router-dom": "^6.23.1"
   }
- 
 }

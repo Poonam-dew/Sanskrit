@@ -55,6 +55,8 @@ const Announcements = () => {
                     <p className={styles.box}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae odio ut
                         nisi mattis tempus non porta urna. Donec in dictum libero. Curabitur
                         pellentesque urna semper magna venenatis placerat.psum</p>
+                    
+                        
                 </div>
             </div>
         </section>

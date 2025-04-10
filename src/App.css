@@ -24,7 +24,7 @@ body {
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.1; /* You can increase this to make it more visible */
+  opacity: 0.5; /* You can increase this to make it more visible */
   pointer-events: none;
 }
 
