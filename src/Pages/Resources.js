@@ -85,7 +85,7 @@ const Resources = () => {
               className="dropdown-toggle"
               onClick={() => toggleDropdown(index, setExpandedIndexBox1, expandedIndexBox1)}
             >
-              {section.title} {expandedIndexBox1 === index ? <FaChevronUp /> : <FaChevronDown />}
+              {section.title} 
             </button>
             {expandedIndexBox1 === index && (
   <div className="link-list">
@@ -112,7 +112,7 @@ const Resources = () => {
           className="dropdown-toggle"
           onClick={() => toggleDropdown(0, setExpandedIndexBox2, expandedIndexBox2)}
         >
-          View Articles {expandedIndexBox2 === 0 ? <FaChevronUp /> : <FaChevronDown />}
+          View Articles 
         </button>
         {expandedIndexBox2 === 0 && (
           <div className="card-container">
@@ -134,7 +134,7 @@ const Resources = () => {
           className="dropdown-toggle"
           onClick={() => toggleDropdown(0, setExpandedIndexBox3, expandedIndexBox3)}
         >
-          View Resources {expandedIndexBox3 === 0 ? <FaChevronUp /> : <FaChevronDown />}
+          View Resources 
         </button>
         {expandedIndexBox3 === 0 && (
           <div className="card-container">

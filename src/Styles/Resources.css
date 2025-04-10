@@ -5,10 +5,13 @@
   margin: 1rem 0;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background-color: #D5C5AE;
+  width:80%
 }
 
 .box-title {
-  font-size: 1.5rem;
+  
+  font-size: 1.7rem;
   font-weight: bold;
 }
 
@@ -18,7 +21,8 @@
 }
 
 .dropdown-toggle {
-  background: #f0f0f0;
+  background-color: #312229;
+  color:  #D5C5AE;
   border: none;
   padding: 0.5rem 1rem;
   width: 100%;
@@ -32,6 +36,7 @@
 }
 
 .dropdown-links {
+  
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
@@ -42,24 +47,29 @@
 }
 
 .pdf-card {
-  background: #e8f0fe;
+  background: #f1efee;
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 .link-list {
-  margin-top: 10px;
-  margin-left: 1rem;
+  margin-bottom: 25px;
+  padding: 20px 30px;        /* Added padding for better readability */
+  border-left: 6px solid #312229;
+  background: #f1efee;
+  transition: 0.5s;
 }
 
 .link-row {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
+  
 }
 
 .link-heading {
+  color: fff;
   font-weight: 600;
   margin-right: 8px;
   white-space: nowrap;
@@ -68,4 +78,5 @@
 .link-anchor {
   color: #0645AD;
   text-decoration: underline;
+  margin-left: 10px;
 }
