@@ -41,7 +41,7 @@ const Activity = () => {
 
             <div className={styles.grid}>
                 <div className={styles.section}>
-                    <div className={styles.title}><h2>FACEBOOK</h2></div>
+                    <div className={styles.title}><h2>INSTAGRAM</h2></div>
                     <p></p>
                 </div>
 

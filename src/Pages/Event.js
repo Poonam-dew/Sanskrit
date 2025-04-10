@@ -3,8 +3,9 @@ import MyCarousel from "../components/Carousel.js";
 import event1 from "../assets/ConvoChanting.jpeg";
 import event2 from "../assets/pragy.jpeg"; 
 import "../Styles/Event.css"; 
+import Activity from "../components/RecentActivity.jsx"
 
-const EventsWeHave = () => {
+const Events = () => {
   return (
     <div className="EventsWeHave">
       <div className="eventSlider">
@@ -49,6 +50,15 @@ const EventsWeHave = () => {
           <img src={event1} alt="Main Event 3" />
         </div>
       </div>
+    </div>
+  );
+};
+
+const EventsWeHave = () => {
+  return (
+    <div>
+      <Events />
+      <Activity />
     </div>
   );
 };

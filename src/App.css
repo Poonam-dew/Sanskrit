@@ -1,24 +1,31 @@
 /* Apply background image to the entire page */
 body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-repeat: no-repeat; /* Prevents tiling of the image */
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: transparent; /* or 'white' if you want it light */
 }
 
 /* Ensure all content respects the full-page background */
 .App {
-  width: 100%;
-  min-height: 100vh; /* Ensures the app stretches to fill the viewport height */
-  display: flex;
-  flex-direction: column;
-  background-image: url('../src/assets/Background.png');
-  background-position: center 165px; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling of the image */
-  width: 100%;
-  height: auto;
-  display: flex;
+  position: relative;
+  background-color: transparent;
+  min-height: 100vh;
+  overflow: hidden;
 
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.1; /* You can increase this to make it more visible */
+  pointer-events: none;
 }
 
 h1 {
@@ -40,5 +47,223 @@ h1 {
   .strip {
     background-color: #54101D;
     flex-grow: 1;
+  }
+}
+
+/* for teams page  */
+ 
+#mainContainer {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin: 3.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+#itemsContainer {
+  width: 100%;
+  height: auto;
+  margin: 3.5rem 0rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#heading {
+  margin-top: 1rem;
+}
+
+#heading h1 {
+  color: #C4261C;
+  font-weight: 600;
+
+}
+
+.containers {
+  width: 160px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: rgb(226, 217, 217);
+  /* margin: 5rem .6rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  position: relative;
+  border: 2px solid black;
+}
+
+.superContainer {
+  margin: 1rem .5rem;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  position: absolute;
+  width: 160px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 2px solid black; */
+}
+
+.name {
+  width: 150px;
+  height: 2rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.name h4 {
+  font-size: 1rem;
+  font-weight: 700; /* Changed from 300 to 700 */
+  color: #312229;
+}
+
+.information {
+  width: 150px;
+  height: 100px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  position: absolute;
+  bottom: -5rem;
+  /* opacity: 0; */
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  border-radius: .5rem;
+  display: none;
+  transition: display .5s .5s;
+}
+
+.information_heading {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: .3rem;
+}
+
+.information_para {
+  font-size: .9rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0px .3rem;
+  margin-bottom: .3rem;
+  color: #C4261C;
+}
+
+.generated_image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+
+.generated_link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #C4261C;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card Animation start */
+.containers:hover .information {
+  animation: show-data 1s forwards;
+  /* opacity: 1; */
+  display: block;
+  transition: display .3sec;
+}
+
+
+.containers:hover {
+  animation: remove-overflow 2s forward;
+}
+
+.containers:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.containers:not(:hover) .information {
+  animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+  50% {
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    transform: translateY(-.8rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-.8rem);
+  }
+
+  50% {
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    transform: translateY(-.3rem);
+  }
+}
+
+/* Card Animation end */
+.p-5 {
+  width: 100%;
+  padding: .5rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Queries */
+
+@media(min-width:480px) {
+  .containers {
+    width: 200px;
+    /* margin: 2rem 2rem; */
+  }
+
+  .superContainer {
+    margin: 2rem 2rem;
+  }
+
+  .p-5 {
+    padding: 3rem !important;
+  }
+
+  .img {
+    width: 200px;
   }
 }

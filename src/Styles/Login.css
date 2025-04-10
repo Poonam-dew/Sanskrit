@@ -112,7 +112,7 @@
 }
 @media(max-width:700px){
   .Login{
-    background-image: url('../assets/Background_2.png');
+    
     background-repeat:repeat-y;
     background-size: 100%;
   }

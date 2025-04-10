@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "../Styles/LearningSanskrit.css";
 import libraryIcon from "../assets/library.png";  // Replace with actual image path
 import SanFun from "../assets/SanskritFun.png";    // Replace with actual image path
+import Activity from "../components/RecentActivity.jsx"
 
-const LearningSanskrit = () => {
+const LearnSanskrit = () => {
   const navigate = useNavigate();
 
   return (
@@ -23,5 +24,14 @@ const LearningSanskrit = () => {
     </div>
   );
 };
+
+const LearningSanskrit = () => {
+  return (
+    <div >
+      <LearnSanskrit />
+      <Activity />
+    </div>
+  );
+}
 
 export default LearningSanskrit;

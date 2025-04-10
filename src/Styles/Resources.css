@@ -1,5 +1,4 @@
 .resources{
-  background-image:url('../assets/Background.png');
   background-repeat:repeat-y;
   background-color:#fcf7b2 ;
   background-size: 100%;
@@ -23,7 +22,7 @@
 
 @media(max-width:780px){
   .resources{
-    background-image: url('../assets/Background_2.png');
+  
     background-repeat:repeat-y;
     background-size: 100%;
   }
